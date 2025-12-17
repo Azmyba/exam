@@ -1,10 +1,4 @@
-<div ondblclick="clearOut()" class="card">
-  Double-click here to clear
-  <div id="out">Some text</div>
-</div>
-
-<script>
-function clearOut() {
-  document.getElementById("out").innerText="";
-}
-</script>
+<section ondblclick="this.querySelector('.output').innerText=''">
+<h2>20. Double click clear</h2>
+<div class="output">Double click this box</div>
+</section>
