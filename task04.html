@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="box">
+<h3>Toggle Case</h3>
+<input id="t">
+<button onclick="tog()">Toggle</button>
+<div class="result" id="r"></div>
+</div>
+
+<script>
+function tog(){
+ r.innerText=[...t.value].map(c=>c===c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join("");
+}
+</script>
+</body>
+</html>
