@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container card">
+  <h2>Extract characters</h2>
+  <input id="str" placeholder="Enter string">
+  <button onclick="extract()">Extract</button>
+  <div class="output" id="out"></div>
+</div>
+
+<script>
+function extract() {
+  let s = document.getElementById("str").value;
+  let res = s[0] + ", " + s[2] + ", " + s[3] + ", " + s[s.length-1];
+  document.getElementById("out").innerText = res;
+}
+</script>
+</body>
+</html>
