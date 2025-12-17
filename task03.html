@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="box">
+<h3>Longest Word</h3>
+<input id="t">
+<button onclick="long()">Find</button>
+<div class="result" id="r"></div>
+</div>
+
 <script>
-function longest() {
-  let s = document.getElementById("str").value.split(" ");
-  let l = s.reduce((a,b)=> b.length>a.length?b:a,"");
-  document.getElementById("out").innerText = l;
+function long(){
+ let w=t.value.split(" ");
+ r.innerText=w.reduce((a,b)=>a.length>b.length?a:b);
 }
 </script>
+</body>
+</html>
