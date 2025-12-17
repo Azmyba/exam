@@ -1,0 +1,7 @@
+<script>
+function longest() {
+  let s = document.getElementById("str").value.split(" ");
+  let l = s.reduce((a,b)=> b.length>a.length?b:a,"");
+  document.getElementById("out").innerText = l;
+}
+</script>
