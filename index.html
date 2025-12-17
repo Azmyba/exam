@@ -1,24 +1,25 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Aikoz — Tasks Portfolio</title>
+<meta charset="UTF-8" />
+<title>Aikoz — Tasks & Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 :root{
-  --bg:#0b0f1a;
-  --card:#12172a;
-  --accent:#7c7cff;
-  --text:#e6e8ff;
-  --muted:#9aa0ff;
+  --bg:#0f1220;
+  --card:#171a2e;
+  --accent:#00e5ff;
+  --accent2:#ff7ad9;
+  --text:#e8eaf6;
+  --muted:#9aa0c3;
 }
 
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Inter,Segoe UI,Arial,sans-serif;
-  background:linear-gradient(135deg,#0b0f1a,#141b3a);
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1a1f4a, #0f1220);
   color:var(--text);
 }
 
@@ -26,80 +27,85 @@ body{
 nav{
   display:flex;
   justify-content:space-between;
-  padding:20px 50px;
+  padding:20px 40px;
 }
 nav a{
   color:var(--text);
-  margin-left:20px;
   text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
 }
+nav a:hover{color:var(--accent)}
 
 /* HERO */
 .hero{
   display:grid;
-  grid-template-columns:1.2fr 1fr;
-  padding:80px 60px;
+  grid-template-columns:1.2fr 0.8fr;
   gap:40px;
+  padding:80px 40px;
+  align-items:center;
 }
 .hero h1{
   font-size:48px;
+  margin:0 0 15px;
 }
-.hero span{color:var(--accent)}
-.hero p{max-width:520px;line-height:1.6}
-.hero button{
-  margin-top:20px;
-  padding:12px 22px;
-  border:none;
-  border-radius:25px;
-  background:var(--accent);
-  color:#000;
-  font-weight:600;
-  cursor:pointer;
+.hero span{color:var(--accent2)}
+.hero p{
+  max-width:520px;
+  line-height:1.7;
+  color:var(--muted);
+}
+.hero img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid var(--accent);
 }
 
-/* ABOUT */
+/* SECTION */
 section{
-  padding:60px;
+  padding:60px 40px;
 }
-.section-title{
-  font-size:36px;
+h2{
   text-align:center;
+  font-size:36px;
+  margin-bottom:10px;
+}
+.subtitle{
+  text-align:center;
+  color:var(--muted);
   margin-bottom:40px;
 }
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
-.about-card{
-  background:var(--card);
-  padding:25px;
-  border-radius:18px;
-}
 
-/* TASKS */
-.tasks-grid{
+/* TASKS GRID */
+.tasks{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:20px;
 }
-.task-btn{
-  background:linear-gradient(135deg,#1b235a,#2f3cff);
-  border:none;
-  border-radius:18px;
-  padding:25px;
-  color:white;
-  font-size:16px;
-  cursor:pointer;
-  transition:0.3s;
+.task{
+  background:linear-gradient(135deg,var(--card),#20245a);
+  padding:20px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.3s;
 }
-.task-btn:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 30px rgba(124,124,255,0.4);
+.task:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(0,229,255,.2);
 }
+.task a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+  display:block;
+}
+
+/* FOOTER */
 footer{
   text-align:center;
-  padding:40px;
+  padding:30px;
   color:var(--muted);
 }
 </style>
@@ -110,74 +116,67 @@ footer{
 <nav>
   <strong>Aikoz.</strong>
   <div>
+    <a href="#">Home</a>
     <a href="#about">About</a>
     <a href="#tasks">Tasks</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <div class="hero">
   <div>
+    <p class="subtitle">PHYSICS STUDENT · FRONTEND LEARNER</p>
     <h1>Hi, I’m <span>Aikoz</span> 👋</h1>
     <p>
       I am a Physics student exploring HTML, CSS, and JavaScript.
-      This website contains my JavaScript practice tasks, mini projects,
-      and academic work.
+      I build educational mini-projects and academic websites.
+      This page contains my JavaScript practice tasks and coursework.
     </p>
-    <button onclick="location.href='#tasks'">View Tasks</button>
   </div>
-  <div class="about-card">
-    <p><b>Name:</b> Aikoz Bazarbayeva</p>
-    <p><b>Major:</b> Physics</p>
-    <p><b>Location:</b> Riga, Latvia</p>
-    <p><b>Interests:</b> Web development, education, clean UI</p>
-  </div>
+  <img src="profile.jpg" alt="Aikoz photo">
 </div>
 
 <section id="about">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-grid">
-    <div class="about-card">
-      I am a physics student with a strong interest in programming and
-      frontend development. I enjoy building educational projects
-      and improving my technical skills.
-    </div>
-    <div class="about-card">
-      This portfolio demonstrates my JavaScript practice tasks
-      completed during the course.
-    </div>
-  </div>
+  <h2>About Me</h2>
+  <p class="subtitle">Short academic profile</p>
+  <p style="max-width:800px;margin:auto;text-align:center;color:var(--muted)">
+    My name is Aikoz Bazarbayeva. I am a Physics student with a strong interest
+    in web development and educational technologies. I participate in academic
+    projects, create interactive web pages, and continuously improve my
+    programming skills.
+  </p>
 </section>
 
 <section id="tasks">
-  <h2 class="section-title">SET D — JavaScript Tasks</h2>
+  <h2>JavaScript Tasks — Set D</h2>
+  <p class="subtitle">Each task opens in a separate HTML file</p>
 
-  <div class="tasks-grid">
-    <!-- 20 BUTTONS -->
-    <button class="task-btn" onclick="location.href='task01.html'">Task 1<br>Reverse sentence</button>
-    <button class="task-btn" onclick="location.href='task02.html'">Task 2<br>Extract characters</button>
-    <button class="task-btn" onclick="location.href='task03.html'">Task 3<br>Longest word</button>
-    <button class="task-btn" onclick="location.href='task04.html'">Task 4<br>Toggle case</button>
-    <button class="task-btn" onclick="location.href='task05.html'">Task 5<br>Word & space count</button>
-    <button class="task-btn" onclick="location.href='task06.html'">Task 6<br>Fruits array</button>
-    <button class="task-btn" onclick="location.href='task07.html'">Task 7<br>Remove duplicates</button>
-    <button class="task-btn" onclick="location.href='task08.html'">Task 8<br>Last element</button>
-    <button class="task-btn" onclick="location.href='task09.html'">Task 9<br>Find index</button>
-    <button class="task-btn" onclick="location.href='task10.html'">Task 10<br>Splice delete</button>
-    <button class="task-btn" onclick="location.href='task11.html'">Task 11<br>Arithmetic</button>
-    <button class="task-btn" onclick="location.href='task12.html'">Task 12<br>Input rules</button>
-    <button class="task-btn" onclick="location.href='task13.html'">Task 13<br>Required field</button>
-    <button class="task-btn" onclick="location.href='task14.html'">Task 14<br>Age validation</button>
-    <button class="task-btn" onclick="location.href='task15.html'">Task 15<br>Signup form</button>
-    <button class="task-btn" onclick="location.href='task16.html'">Task 16<br>Success message</button>
-    <button class="task-btn" onclick="location.href='task17.html'">Task 17<br>Reset output</button>
-    <button class="task-btn" onclick="location.href='task18.html'">Task 18<br>Persons array</button>
-    <button class="task-btn" onclick="location.href='task19.html'">Task 19<br>Countdown timer</button>
-    <button class="task-btn" onclick="location.href='task20.html'">Task 20<br>Double click clear</button>
+  <div class="tasks">
+    <div class="task"><a href="task01.html">1. Reverse words order</a></div>
+    <div class="task"><a href="task02.html">2. Extract characters</a></div>
+    <div class="task"><a href="task03.html">3. Longest word</a></div>
+    <div class="task"><a href="task04.html">4. Toggle case</a></div>
+    <div class="task"><a href="task05.html">5. Word & space count</a></div>
+    <div class="task"><a href="task06.html">6. Fruits array</a></div>
+    <div class="task"><a href="task07.html">7. Remove duplicates</a></div>
+    <div class="task"><a href="task08.html">8. Last element popup</a></div>
+    <div class="task"><a href="task09.html">9. Find index</a></div>
+    <div class="task"><a href="task10.html">10. Splice delete</a></div>
+    <div class="task"><a href="task11.html">11. Arithmetic function</a></div>
+    <div class="task"><a href="task12.html">12. Numeric popup</a></div>
+    <div class="task"><a href="task13.html">13. Required field</a></div>
+    <div class="task"><a href="task14.html">14. Age validation</a></div>
+    <div class="task"><a href="task15.html">15. Signup form</a></div>
+    <div class="task"><a href="task16.html">16. Show submitted data</a></div>
+    <div class="task"><a href="task17.html">17. Reset output</a></div>
+    <div class="task"><a href="task18.html">18. Persons array</a></div>
+    <div class="task"><a href="task19.html">19. Countdown timer</a></div>
+    <div class="task"><a href="task20.html">20. Double-click clear</a></div>
   </div>
 </section>
 
-<footer>
-  © 2025 Aikoz — JavaScript Practice Tasks
+<footer id="contact">
+  © 2025 Aikoz Bazarbayeva · Web & Physics Projects
 </footer>
 
 </body>
