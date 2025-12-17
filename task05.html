@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="box">
+<h3>Word & Space Count</h3>
+<input id="t">
+<button onclick="cnt()">Count</button>
+<div class="result" id="r"></div>
+</div>
+
+<script>
+function cnt(){
+ r.innerText="Words: "+t.value.split(" ").length+
+ " Spaces: "+(t.value.split(" ").length-1);
+}
+</script>
+</body>
+</html>
