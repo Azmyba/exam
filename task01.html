@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container card">
+  <h2>Reverse words order</h2>
+  <input id="text" placeholder="Enter sentence">
+  <button onclick="reverse()">Reverse</button>
+  <div class="output" id="out"></div>
+</div>
+
+<script>
+function reverse() {
+  let s = document.getElementById("text").value;
+  document.getElementById("out").innerText =
+    s.split(" ").reverse().join(" ");
+}
+</script>
+</body>
+</html>
