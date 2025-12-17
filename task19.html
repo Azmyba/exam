@@ -1,0 +1,11 @@
+<script>
+let time = 10, id;
+function start() {
+  id = setInterval(()=>{
+    document.getElementById("out").innerText = time--;
+    if(time<0) clearInterval(id);
+  },1000);
+}
+function pause(){ clearInterval(id); }
+function reset(){ time=10; document.getElementById("out").innerText=time; }
+</script>
